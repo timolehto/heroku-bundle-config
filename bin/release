@@ -1,0 +1,9 @@
+#!/bin/sh
+
+cat << EOF
+---
+config_vars:
+  PATH: bin:/usr/bin:/bin
+default_process_types:
+  bundle_config: cat .bundle/config
+EOF

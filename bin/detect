@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# this pack is valid for apps with a .heroku-bundle directory in the root
+if [ -d "$1.heroku-bundle" ]; then
+  echo "Heroku Bundle Config"
+  exit 0
+else
+  exit 1
+fi

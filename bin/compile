@@ -1,0 +1,4 @@
+#!/bin/sh
+
+[ -d "$1.bundle" ] && rm -rf "$1/.bundle"
+mv "$1/.heroku-bundle" .bundle
