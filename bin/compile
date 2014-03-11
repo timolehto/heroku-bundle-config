@@ -1,4 +1,7 @@
 #!/bin/sh
 
-[ -d "$1.bundle" ] && rm -rf "$1/.bundle"
+echo "Purging .bundle folder if present"
+[ -d "$1/.bundle" ] && rm -rf "$1/.bundle"
+echo "Renaming heroku-bundle"
 mv "$1/.heroku-bundle" .bundle
+echo "Done."
