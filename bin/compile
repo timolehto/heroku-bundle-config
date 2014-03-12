@@ -24,4 +24,4 @@ echo "Caching the changes.."
 mkdir -p "$2"
 cp -r "$1/.bundle" "$2/.bundle"
 
-sed: can't read /tmp/build_c982f0d9-9b66-42e6-a875-0a681a1e47fb/.bundle/*: No such file or directory
+#sed: can't read /tmp/build_c982f0d9-9b66-42e6-a875-0a681a1e47fb/.bundle/*: No such file or directory
