@@ -11,6 +11,7 @@ Example usage:
     #Providigin that you have somehow compiled the libraries for the Heroku dynos and copied the prebuilt libraries to vendor/prebuilt...
     $ echo >> "gem 'libarchive-ruby'" >> Gemfile
     $ bundle
+    $ heroku run --app cat .bundle/config > .bundle/config #This is to copy the default stuff heroku uses on it's own as the basis...
     $ bundle config --local build.libarchive-ruby "--with-cppflags='-I/app/vendor/prebuilt/include' --with-ldflags='-L/app/vendor/prebuilt/lib'"
     $ mv .bundle .heroku-bundle #You do not want to use this version of the gem locally.. only on heroku
     $ git add .heroku-bundle Gemfile Gemfile.lock
