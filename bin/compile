@@ -33,7 +33,12 @@ echo "Renaming heroku-bundle"
 mv "$build_dir/.heroku-bundle" "$build_dir/.bundle"
 echo "Done."
 
-ls "$build_dir/.bundle/*"
+echo 'ls "$build"'
+ls "$build"
+echo 'ls "$build_dir/.heroku-bundle"'
+ls "$build_dir/.heroku-bundle"
+echo 'ls "$build_dir/.bundle"'
+ls "$build_dir/.bundle"
 echo "Convert all aboslute path references in the bundle to refer the temporary build location instead."
 sed "s /app/ /$build_dir/ g" "$build_dir/.bundle/*"
 
