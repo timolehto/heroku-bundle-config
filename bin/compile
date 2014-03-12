@@ -1,5 +1,10 @@
 #!/bin/sh
 
+echo "Old .bundle/config contents"
+cat "$1/.bundle/config"
+echo "Cache .bundle/config contents"
+cat "$2/.bundle/config"
+
 echo "Purging .bundle folder if present"
 [ -d "$1/.bundle" ] && rm -rf "$1/.bundle"
 echo "Renaming heroku-bundle"
