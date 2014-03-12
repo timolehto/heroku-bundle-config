@@ -1,8 +1,17 @@
 #!/bin/sh
 
 pwd
-ls
-ls "$1/.heroku-bundle"
+echo $1
+echo $2
+echo $3
+echo "ls"
+ls -all
+echo "ls $1"
+ls -all $1
+echo "ls $2"
+ls -all $2
+echo "ls $3"
+ls -all $3
 
 echo "Old .bundle/config contents"
 cat "$1/.bundle/config"
