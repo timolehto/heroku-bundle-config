@@ -8,7 +8,7 @@ cat "$2/.bundle/config"
 echo "Purging .bundle folder if present"
 [ -d "$1/.bundle" ] && rm -rf "$1/.bundle"
 echo "Renaming heroku-bundle"
-mv "$1/.heroku-bundle" .bundle
+mv "$1/.heroku-bundle" "$1/.bundle"
 echo "Done."
 
 echo "Purging .bundle folder if present from cache as well"
