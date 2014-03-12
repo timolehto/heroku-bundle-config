@@ -10,3 +10,8 @@ echo "Purging .bundle folder if present"
 echo "Renaming heroku-bundle"
 mv "$1/.heroku-bundle" .bundle
 echo "Done."
+
+echo "Purging .bundle folder if present from cache as well"
+[ -d "$2/.bundle" ] && rm -rf "$2/.bundle"
+echo "Caching the changes.."
+cp -r "$1/.bundle" "$2/.bundle"
