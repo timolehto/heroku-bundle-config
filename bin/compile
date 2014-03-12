@@ -1,9 +1,9 @@
 #!/bin/sh
 
 #pwd contains this buildpack
-build_dir= $1 #Contains the rails application, as it was checked out from GIT
+build_dir="$1" #Contains the rails application, as it was checked out from GIT
 #E.g. /tmp/build_d237f460-a947-4e42-a7e1-61a3abcc27b6
-cache_dir= $2 #Contains the cahde dir. All the cached files are there and this
+cache_dir="$2" #Contains the cahde dir. All the cached files are there and this
 #or any later buildpacks may use it to fetch data.
 #/app/tmp/cache
 
