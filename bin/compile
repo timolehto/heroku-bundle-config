@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 #pwd contains this buildpack
 build_dir="$1" #Contains the rails application, as it was checked out from GIT
@@ -33,14 +33,15 @@ echo "Renaming heroku-bundle"
 mv "$build_dir/.heroku-bundle" "$build_dir/.bundle"
 echo "Done."
 
-echo 'ls "$build"'
-ls "$build"
+echo 'ls -all "$build_dir"'
+ls -all "$build_dir"
 echo 'ls "$build_dir/.heroku-bundle"'
 ls "$build_dir/.heroku-bundle"
 echo 'ls "$build_dir/.bundle"'
 ls "$build_dir/.bundle"
 echo "Convert all aboslute path references in the bundle to refer the temporary build location instead."
-sed "s /app/ /$build_dir/ g" "$build_dir/.bundle/*"
+sed -i "s /app/ /$build_dir/ g" "$build_dir/.bundle/*"
+#sed "s /app/ /$build_dir/ g" "$build_dir/.bundle/*"
 
 echo "Purging .bundle folder if present from cache as well"
 [ -d "$cache_dir/.bundle" ] && rm -rf "$cache_dir/.bundle"
