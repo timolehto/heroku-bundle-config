@@ -40,7 +40,7 @@ ls "$build_dir/.heroku-bundle"
 echo 'ls "$build_dir/.bundle"'
 ls "$build_dir/.bundle"
 echo "Convert all aboslute path references in the bundle to refer the temporary build location instead."
-find "$build_dir/.bundle/" -type f -exec sed -i "s /app/ /$build_dir/ g" {} \;
+find "$build_dir/.bundle/" -type f -exec sed -i "s /app/ $build_dir/ g" {} \;
 #sed "s /app/ /$build_dir/ g" "$build_dir/.bundle/*"
 
 echo "Purging .bundle folder if present from cache as well"
