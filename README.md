@@ -3,6 +3,8 @@ Heroku buildpack: Heroku Bundle Config
 
 This is a simple [Heroku buildpack](http://devcenter.heroku.com/articles/buildpacks). Having only one simple puprose. That is to seek for a folder `.heroku-bundle`. If such a file is found what this buildpack will do is it will rename the folder `.heroku-bundle` to just `.bundle`. Now, when heroku installs your gems, it will consult this folder and try to find a file `/config` in it for extra configuration options etc. to use for various gems. For more information on the structure of the file see: [This nice gist](https://gist.github.com/perplexes/5357663) (there's also a sample config file). If you do not want to manually mess with config file syntax you can refer to the [the official documentation](http://bundler.io/v1.5/man/bundle-config.1.html) and generate the config file locally via bundler commands like `bundle config --local build.some_gem "--with-cppflags='-I/app/vendor/prebuilt/include' --with-ldflags='-L/app/vendor/prebuilt/lib'"`. Obviously, this buildpack is pretty much useless on its own, so should you wish to use it you ought to use it in conjunction with the [Heroku Builpack Multi](https://github.com/ddollar/heroku-buildpack-multi).
 
+For more ideas and a nice tutorial for doing stuff with this (and other related) tool(s), check out this Steve Took's blog article about [using charklock_holmes on Heroku](http://tooky.co.uk/using-charklock_holmes-on-heroku/).
+
 Usage
 -----
 
