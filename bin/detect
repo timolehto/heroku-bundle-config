@@ -1,5 +1,5 @@
 #!/bin/sh
-
+echo 'WARNING YOU ARE USING DEPRECATED, OBSOLETE, UNMAINTANED BUILDPACK heroku-bundle-config!!!'
 # this pack is valid for apps with a .heroku-bundle directory in the root
 if [ -d "$1/.heroku-bundle" ]; then
   echo "Heroku Bundle Config"
