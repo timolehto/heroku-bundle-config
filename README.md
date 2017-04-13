@@ -1,3 +1,11 @@
+DEPRECATED, OBSOLET, UNMAINTAINED
+=======================
+Bundler has had support for specifying any build configs via envs for a while now and all of this is fully supported with heroku so there is no need to use this buildpack anymore. See this heroku article for more information:
+https://devcenter.heroku.com/articles/bundler-configuration#gem-build-configuration-settings
+
+Also apparently caching is nolonger supported the way it used to be and may be causing problems for users (as per this issue:
+https://github.com/timolehto/heroku-bundle-config/issues/4). So I've simply removed those lines. I haven't been using this buildpack for anything for a long time and can't be bothered to really test this change... anyhow pls don't use this anymore. There will be no more commits to this repo.
+
 Heroku buildpack: Heroku Bundle Config
 =======================
 
